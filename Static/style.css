@@ -1,0 +1,152 @@
+html, body {
+    background-color: #F5F5DC;  /* Light gray background */
+    font-family: Geneva, Helvetica, Arial, sans-serif;
+    color: black;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* Global link styles */
+a {
+    color: #003057;  /* Default, visited, and active link color */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #D3BC8D;  /* Hover link color */
+}
+
+/* Header row for homepage */
+.header-row {
+    background-color: #003057; /* Georgia Tech Blue */
+    color: white; /* Set text color to white */
+}
+
+.header-row a:link, .header-row a:visited, .header-row a:active {
+    color: #D3BC8D;  /* Georgia Tech Gold links in header */
+}
+
+/* Specific font settings for the name */
+.header-name {
+    font-family: Geneva, sans-serif;
+    font-size: 1.5em;
+}
+
+/* Styling for small text, like contact info */
+.small-text {
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+
+/* Footer Section */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #003057; /* Same as header */
+    color: white;
+    padding: 10px 15px; /* Adjusted padding */
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space out elements */
+    align-items: center; /* Center items vertically */
+    box-sizing: border-box;
+}
+
+.footer a:link, .footer a:visited, .footer a:active {
+    color: #D3BC8D; /* Georgia Tech Gold links in footer */
+}
+
+.footer p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Contact info */
+.contact-info {
+    flex: 1;
+    text-align: left;
+    font-size: 0.8em;
+}
+
+/* Verse of the Day in footer */
+.verse-of-the-day {
+    text-align: center;
+}
+
+.verse-of-the-day img {
+    max-width: 30px; /* Limit the image size */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Main content layout */
+.content {
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px;
+}
+
+/* Main text area for homepage */
+.main-text {
+    flex: 1;
+    margin-right: 20px;
+}
+
+/* Profile picture */
+.profile-pic img {
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    margin-right: 120px;
+}
+
+/* Verse of the Day page styles */
+.verse-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.verse-header {
+    text-align: center;
+}
+
+.verse-header h1 {
+    font-size: 2em;
+    color: #003057;
+    font-weight: bold;
+}
+
+.verse-content {
+    font-size: 1.2em;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.verse-content p {
+    font-style: italic;
+}
+
+.back-link {
+    text-align: center;
+}
+
+.back-link a {
+    font-size: 1.1em;
+    padding: 10px 20px;
+    background-color: #003057;
+    color: #ffffff;
+    border-radius: 5px;
+    transition: background-color 0.5s;
+}
+
+.back-link a:hover {
+    background-color: #D3BC8D;
+}
+
+/* Additional styling for other pages can go here */
