@@ -77,17 +77,17 @@ a:hover {
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
-    max-width: 1450px;
-    margin: 30px auto;
-    padding: 0 35px;
-    gap: 65px;
+    margin: 30px 0;
+    padding: 0 25px;
+    gap: 50px;
     box-sizing: border-box;
 }
 
 .main-text {
-    flex: 1 1 58%;
+    flex: 0 1 760px;
     max-width: 760px;
     min-width: 0;
+    text-align: left;
 }
 
 .main-text p {
@@ -113,7 +113,7 @@ ul li:hover {
    ========================= */
 
 .profile-pic {
-    flex: 1 1 42%;
+    flex: 1;
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
@@ -237,7 +237,7 @@ ul li:hover {
 
 @media (max-width: 950px) {
     .content {
-        gap: 35px;
+        gap: 30px;
     }
 
     .profile-pic img {
@@ -248,8 +248,7 @@ ul li:hover {
 @media (max-width: 750px) {
     .content {
         flex-direction: column;
-        width: 100%;
-        margin: 25px auto;
+        margin: 25px 0;
         padding: 0 20px;
     }
 
