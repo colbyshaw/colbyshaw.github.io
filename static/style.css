@@ -19,6 +19,10 @@ body {
     animation: fadeIn 0.35s ease-in-out;
 }
 
+img {
+    max-width: 100%;
+}
+
 /* =========================
    LINKS
    ========================= */
@@ -117,6 +121,7 @@ ul li:hover {
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
+    min-width: 0;
 }
 
 .profile-pic img {
@@ -165,13 +170,16 @@ ul li:hover {
 
 .contact-info {
     flex: 1;
+    min-width: 0;
     text-align: left;
     font-size: 0.8em;
 }
 
 .verse-of-the-day img {
     display: block;
+    width: 30px;
     max-width: 30px;
+    height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -232,7 +240,7 @@ ul li:hover {
 }
 
 /* =========================
-   RESPONSIVE DESIGN
+   TABLET DESIGN
    ========================= */
 
 @media (max-width: 950px) {
@@ -240,20 +248,60 @@ ul li:hover {
         gap: 30px;
     }
 
+    .main-text {
+        flex: 1 1 55%;
+    }
+
+    .profile-pic {
+        flex: 1 1 45%;
+    }
+
     .profile-pic img {
         max-width: 400px;
     }
 }
 
+/* =========================
+   PHONE AND SMALL TABLET DESIGN
+   ========================= */
+
 @media (max-width: 750px) {
+    body {
+        padding-bottom: 0;
+    }
+
+    .header {
+        padding: 13px 18px;
+    }
+
+    .header-name {
+        font-size: 1.3em;
+    }
+
+    .small-text {
+        font-size: 0.9em;
+    }
+
     .content {
         flex-direction: column;
-        margin: 25px 0;
-        padding: 0 20px;
+        width: 100%;
+        margin: 22px 0;
+        padding: 0 18px;
+        gap: 25px;
     }
 
     .main-text {
+        flex: none;
+        width: 100%;
         max-width: 100%;
+    }
+
+    .main-text p {
+        line-height: 1.5;
+    }
+
+    ul {
+        padding-left: 22px;
     }
 
     .profile-pic {
@@ -262,11 +310,65 @@ ul li:hover {
     }
 
     .profile-pic img {
-        max-width: 400px;
+        width: 100%;
+        max-width: 430px;
+    }
+
+    .footer {
+        position: static;
+        margin-top: 30px;
+        padding: 10px 14px;
+    }
+
+    .contact-info p,
+    .contact-info a {
+        overflow-wrap: anywhere;
+        word-break: break-word;
     }
 
     .verse-container {
+        width: auto;
         margin: 30px 15px;
+        padding: 20px;
+    }
+
+    .verse-header h1 {
+        font-size: 1.7em;
+    }
+
+    .verse-content {
+        font-size: 1.05em;
+    }
+}
+
+/* =========================
+   NARROW PHONE DESIGN
+   ========================= */
+
+@media (max-width: 480px) {
+    .header {
+        padding: 12px 15px;
+    }
+
+    .content {
+        padding: 0 15px;
+    }
+
+    .profile-pic img {
+        max-width: 100%;
+    }
+
+    .footer {
+        gap: 12px;
+    }
+
+    .contact-info {
+        font-size: 0.72em;
+    }
+
+    .verse-of-the-day img {
+        width: 28px;
+        max-width: 28px;
     }
 }
 

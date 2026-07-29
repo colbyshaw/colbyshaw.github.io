@@ -2,82 +2,140 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Teaching - Colby Shaw</title>
+
     <link rel="shortcut icon" href="static/favicon.ico">
-    <link rel="stylesheet" href="static/style.css" type="text/css">
+    <link rel="stylesheet" href="static/style.css?v=4">
 
     <style>
-    .teaching-title {
-        font-size: 28px;
-        margin: 40px 0 25px 0;
-        text-align: center;
-    }
+        .teaching-title {
+            margin: 40px 0 25px;
+            font-size: 28px;
+            text-align: center;
+        }
 
-    .teaching-container {
-        max-width: 900px;
-        margin: 0 0 40px 40px; /* hard left alignment */
-        padding: 0;
-        text-align: left;
-    }
+        .teaching-container {
+            max-width: 900px;
+            margin: 0 0 40px 40px;
+            padding: 0;
+            text-align: left;
+        }
 
-    .teaching-item {
-        display: flex;
-        gap: 40px;
-        margin-bottom: 12px;
-    }
+        .teaching-item {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 12px;
+        }
 
-    .semester {
-        font-weight: bold;
-        font-size: 16px;
-        min-width: 180px;
-    }
+        .semester {
+            min-width: 180px;
+            font-size: 16px;
+            font-weight: bold;
+        }
 
-    .course {
-        font-size: 16px;
-    }
-</style>
+        .course {
+            font-size: 16px;
+        }
+
+        @media (max-width: 750px) {
+            .teaching-title {
+                margin: 30px 0 22px;
+                font-size: 26px;
+            }
+
+            .teaching-container {
+                width: auto;
+                max-width: none;
+                margin: 0 20px 40px;
+            }
+
+            .teaching-item {
+                gap: 20px;
+            }
+
+            .semester {
+                min-width: 145px;
+            }
+        }
+
+        @media (max-width: 550px) {
+            .teaching-title {
+                margin: 25px 0 20px;
+                font-size: 24px;
+            }
+
+            .teaching-container {
+                margin: 0 18px 35px;
+            }
+
+            .teaching-item {
+                display: block;
+                margin-bottom: 20px;
+            }
+
+            .semester {
+                min-width: 0;
+                margin-bottom: 4px;
+            }
+
+            .course {
+                line-height: 1.4;
+            }
+
+            .header-row td {
+                padding: 13px 18px;
+            }
+        }
+    </style>
 </head>
+
 <body>
+
     <table class="header-row" cellpadding="15" width="100%">
         <tr>
             <td class="header-name">
                 Colby Shaw
-                <a href="index.html" class="small-text" style="padding-left: 10px;">Home</a>
+                <a href="index.html" class="small-text">Home</a>
             </td>
         </tr>
     </table>
 
-    <!-- CENTERED TITLE ONLY -->
-    <div class="teaching-title"><strong>Teaching</strong></div>
-
-    <!-- LEFT-ALIGNED CONTENT ONLY -->
-    <div class="teaching-container">
-         <div class="teaching-item">
-            <div class="semester">Fall 2026</div>
-            <div class="course">TA for Calculus II (Math 1301)</div>
+    <main>
+        <div class="teaching-title">
+            <strong>Teaching</strong>
         </div>
 
-        <div class="teaching-item">
-            <div class="semester">Spring 2026</div>
-            <div class="course">TA for Calculus II (Math 1301)</div>
-        </div>
+        <div class="teaching-container">
+            <div class="teaching-item">
+                <div class="semester">Fall 2026</div>
+                <div class="course">TA for Calculus II (Math 1301)</div>
+            </div>
 
-        <div class="teaching-item">
-            <div class="semester">Fall 2025</div>
-            <div class="course">TA for Calculus I (Math 1300)</div>
-        </div>
+            <div class="teaching-item">
+                <div class="semester">Spring 2026</div>
+                <div class="course">TA for Calculus II (Math 1301)</div>
+            </div>
 
-        <div class="teaching-item">
-            <div class="semester">Spring 2025</div>
-            <div class="course">Calculus Tutor</div>
-        </div>
+            <div class="teaching-item">
+                <div class="semester">Fall 2025</div>
+                <div class="course">TA for Calculus I (Math 1300)</div>
+            </div>
 
-        <div class="teaching-item">
-            <div class="semester">Fall 2024</div>
-            <div class="course">Calculus Tutor</div>
+            <div class="teaching-item">
+                <div class="semester">Spring 2025</div>
+                <div class="course">Calculus Tutor</div>
+            </div>
+
+            <div class="teaching-item">
+                <div class="semester">Fall 2024</div>
+                <div class="course">Calculus Tutor</div>
+            </div>
         </div>
-    </div>
+    </main>
+
 </body>
+
 </html>
