@@ -2,13 +2,21 @@
    BASE STYLES
    ========================= */
 
-html, body {
-    background-color: #F5F5DC;
-    font-family: Geneva, Helvetica, Arial, sans-serif;
-    color: black;
+html,
+body {
+    width: 100%;
     margin: 0;
     padding: 0;
-    width: 100%;
+    background-color: #F5F5DC;
+    color: black;
+    font-family: Geneva, Helvetica, Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    padding-bottom: 75px;
+    box-sizing: border-box;
+    animation: fadeIn 0.35s ease-in-out;
 }
 
 /* =========================
@@ -18,7 +26,7 @@ html, body {
 a {
     color: #003057;
     text-decoration: none;
-    transition: all 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
 }
 
 a:hover {
@@ -28,41 +36,36 @@ a:hover {
 }
 
 /* =========================
-   HEADER (SUPPORT BOTH TYPES)
+   HEADER
    ========================= */
 
-/* Old table-based header */
 .header-row {
     background-color: #003057;
     color: white;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* New modern header */
 .header {
+    width: 100%;
+    padding: 15px 25px;
+    box-sizing: border-box;
     background-color: #003057;
     color: white;
-    padding: 15px 20px;
-    width: 100%;
-    box-sizing: border-box;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* Header links */
 .header a,
 .header-row a {
     color: #D3BC8D;
 }
 
-/* Name styling */
 .header-name {
     font-size: 1.5em;
 }
 
-/* Small text */
 .small-text {
-    font-size: 0.95em;
     margin-left: 10px;
+    font-size: 0.95em;
 }
 
 /* =========================
@@ -71,23 +74,33 @@ a:hover {
 
 .content {
     display: flex;
-    justify-content: flex-start;
-    margin: 25px;
-    gap: 30px;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1450px;
+    margin: 30px auto;
+    padding: 0 35px;
+    gap: 65px;
+    box-sizing: border-box;
 }
 
 .main-text {
-    flex: 1;
-    max-width: 700px;
+    flex: 1 1 58%;
+    max-width: 760px;
+    min-width: 0;
 }
 
 .main-text p {
     line-height: 1.55;
 }
 
-/* Lists */
+ul {
+    padding-left: 25px;
+}
+
 ul li {
     padding: 3px 0;
+    line-height: 1.45;
     transition: transform 0.15s ease;
 }
 
@@ -99,12 +112,23 @@ ul li:hover {
    PROFILE IMAGE
    ========================= */
 
+.profile-pic {
+    flex: 1 1 42%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
 .profile-pic img {
-    max-width: 280px;
+    display: block;
+    width: 100%;
+    max-width: 480px;
+    height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    margin-right: 80px;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 .profile-pic img:hover {
@@ -119,15 +143,16 @@ ul li:hover {
 .footer {
     position: fixed;
     bottom: 0;
-    width: 100%;
-    background-color: #003057;
-    color: white;
-    padding: 10px 15px;
+    left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    padding: 10px 15px;
     box-sizing: border-box;
-    box-shadow: 0 -2px 6px rgba(0,0,0,0.15);
+    background-color: #003057;
+    color: white;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .footer a {
@@ -138,15 +163,14 @@ ul li:hover {
     margin: 0;
 }
 
-/* Contact info */
 .contact-info {
     flex: 1;
     text-align: left;
     font-size: 0.8em;
 }
 
-/* Verse image */
 .verse-of-the-day img {
+    display: block;
     max-width: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -160,7 +184,8 @@ ul li:hover {
     max-width: 800px;
     margin: 60px auto;
     padding: 25px;
-    background-color: #ffffff;
+    box-sizing: border-box;
+    background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
@@ -175,10 +200,10 @@ ul li:hover {
 }
 
 .verse-content {
-    font-size: 1.2em;
-    color: #333;
-    text-align: center;
     margin-bottom: 30px;
+    color: #333;
+    font-size: 1.2em;
+    text-align: center;
 }
 
 .verse-content p {
@@ -190,31 +215,72 @@ ul li:hover {
 }
 
 .back-link a {
-    font-size: 1.1em;
+    display: inline-block;
     padding: 10px 20px;
     background-color: #003057;
     color: white;
+    font-size: 1.1em;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
 }
 
 .back-link a:hover {
     background-color: #D3BC8D;
+    color: #003057;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+@media (max-width: 950px) {
+    .content {
+        gap: 35px;
+    }
+
+    .profile-pic img {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 750px) {
+    .content {
+        flex-direction: column;
+        width: 100%;
+        margin: 25px auto;
+        padding: 0 20px;
+    }
+
+    .main-text {
+        max-width: 100%;
+    }
+
+    .profile-pic {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .profile-pic img {
+        max-width: 400px;
+    }
+
+    .verse-container {
+        margin: 30px 15px;
+    }
 }
 
 /* =========================
    PAGE ANIMATION
    ========================= */
 
-body {
-    animation: fadeIn 0.35s ease-in-out;
-}
-
 @keyframes fadeIn {
     from {
         opacity: 0;
         transform: translateY(4px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
